@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title><%= content_for?(:title) ? yield(:title) : 'LinkedIn Scraper' %></title>
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- CSRF and CSP Meta Tags -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Generic Meta Tags -->
+    <meta name="keywords" content="linkedin, scraper, lazy, juan, ai, internal, tool">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : '' %>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'LinkedIn Scraper' %>">
+    <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : '' %>"/>
+    <meta property="og:type" content='website'/>
+    <meta property="og:url" content='<%= request.original_url %>'/>
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag '/fontawesome/web/css/all.css', media: 'all', 'data-turbolinks-track' => 'reload' %>
+
+    <!-- Javascript -->
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <!-- Alerts -->
+    <%= render 'components/alerts' %>
+    
+    <!-- Content -->
+    <%= yield %>
+  </body>
+</html>

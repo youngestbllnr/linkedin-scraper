@@ -1,0 +1,36 @@
+.pop {
+  text-align: left;
+  cursor: pointer;
+  padding: 24px;
+  .title {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    grid-gap: 16px;
+    font-weight: 600;
+    font-size: 14pt;
+    margin: 12px;
+    .icon {
+      font-size: 14pt;
+      color: var(--header-primary-color);
+    }
+  }
+  .content {
+    display: none;
+    margin: 16px 12px 10px;
+    font-size: 14pt;
+    font-weight: 400;
+    color: #242424;
+    line-height: 172%;
+    cursor: default;
+  }
+  &.active {
+    .title {
+      margin: 12px 12px 32px;
+      padding: 0 0 32px;
+      border-bottom: 1px solid #efefef;
+    }
+    .content {
+      display: block;
+    }
+  }
+}

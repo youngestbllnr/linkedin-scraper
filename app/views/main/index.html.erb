@@ -1,0 +1,21 @@
+<!-- Landing Page -->
+<div id="landing-page" class="page">
+  <main>
+    <div id="forms">
+      <%= form_tag(scrape_path, method: :post) do %>
+        <%= text_field_tag :username, nil, placeholder: "Enter username" %>
+        <%= submit_tag "Scrape", class: "cta" %>
+      <% end %>
+
+      <%= form_tag(embed_path, method: :post) do %>
+        <%= text_area_tag :input, nil, placeholder: "Enter text", rows: 5 %>
+        <%= submit_tag "Embed", class: "cta" %>
+      <% end %>
+
+      <%= form_tag(search_path, method: :post) do %>
+        <%= text_area_tag :input, nil, placeholder: "Enter project or campaign idea", rows: 5 %>
+        <%= submit_tag "Search", class: "cta" %>
+      <% end %>
+    </div>
+  </main>
+</div>

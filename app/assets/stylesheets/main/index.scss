@@ -1,0 +1,35 @@
+#landing-page {
+  img {
+    height: unset;
+  }
+  main {
+    padding: 24px;
+
+    #forms {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+
+      max-width: 421px;
+      margin: auto;
+
+      form {
+        display: grid;
+        grid-template-columns: 1fr 86px;
+        gap: 8px;
+
+        padding: 16px;
+        background-color: #f0f0f0;
+        border-radius: var(--border-radius);
+
+        input[type="text"],
+        textarea {
+          border-radius: var(--border-radius);
+          border: 2px solid #424242;
+          padding: 14px 16px;
+          outline: none;
+        }
+      }
+    }
+  }
+}

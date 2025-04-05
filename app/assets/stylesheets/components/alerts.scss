@@ -1,0 +1,41 @@
+// alerts.scss
+.alert {
+  position: fixed;
+  left: 36px;
+  bottom: 24px;
+  width: calc(100% - 104px);
+  padding: 16px 12px;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: 400;
+  text-align: center;
+  line-height: 180%;
+  background: #191919;
+  border-radius: 12px;
+  box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  opacity: 0.92;
+  z-index: 100;
+}
+
+.alert.top {
+  top: 24px;
+  bottom: unset;
+}
+
+.alert.bottom {
+  top: unset;
+  bottom: 24px;
+}
+
+form .alert {
+  z-index: 124;
+}
+
+@media screen and (min-width: 721px) {
+  .alert {
+      left: 50%;
+      width: 420px;
+      margin-left: -222px;
+      box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42), 0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2) !important;
+  }
+}
