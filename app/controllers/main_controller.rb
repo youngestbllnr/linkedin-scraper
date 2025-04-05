@@ -25,13 +25,23 @@ class MainController < ApplicationController
            }, status: :ok
   end
 
-  ## POST /search
-  def search
+  ## POST /search_profiles
+  def search_profiles
     input = params[:input]
 
-    results = Sponsors::SearchService.call(input)
-    recommendations = Sponsors::RecommendationService.call(input, results)
+    results = Profiles::SimilaritySearchService.call(input)
 
-    render json: { results: results, recommendations: recommendations }, status: :ok
+    render json: { results: results }, status: :ok
+  end
+
+  ## POST /search_collaborations
+  def search_collaborations
+    input = params[:input]
+
+    results = Collaborations::SearchService.call(input)
+    recommendations = Collaborations::RecommendationService.call(input, results)
+    email = Collaborations::EmailComposerService.call(input, recommendations)
+
+    render json: { results: results, recommendations: recommendations, email_draft: email }, status: :ok
   end
 end

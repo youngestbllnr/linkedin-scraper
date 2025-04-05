@@ -59,8 +59,10 @@ class LinkedInService < ApplicationService
       "Sec-GPC": '1',
       "User-Agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
       "X-Li-Lang": 'en_US',
-      "X-Li-Page-Instance": 'urn:li:page:d_flagship3_profile_view_base;cdF7IhquQ2OXIXxI0aNx5A==',
-      "X-Restli-Protocol-Version": '2.0.0'
+      "X-Li-Page-Instance": 'urn:li:page:d_flagship3_profile_view_base;AAYyAPswqZnzIDHynrAK7g==',
+      "X-Restli-Protocol-Version": '2.0.0',
+      "Cookie": 'li_at=AQEDASxw-pUA9MHqAAABkVnCyRgAAAGWEKxfIlYARCm6YbFaytx-wVa2-b9zHhFXX2X9-lwZM4ODZDMVm2VN3mrd7Dfzh2vIBMYcubIXwpT29EM6G1w6nZlAsUQvHBviSrSvGLwc-Bd8HcuqCBq0Rm6c; JSESSIONID="ajax:4170723596360667143"',
+      "Csrf-token": 'ajax:4170723596360667143'
     }
   end
 
@@ -90,8 +92,6 @@ class LinkedInService < ApplicationService
 
     request = Net::HTTP::Get.new(uri)
     request.initialize_http_header(@headers)
-    request['Cookie'] = 'li_at=AQEDASxw-pUBsCAoAAABiiKR9UcAAAGN-lKxH04AhnBIKLqAwOTEy-Y8OdbmPhBnZ6GJ7GNicRF833uxnwu98z24dPPNtMVj5gn_mtIjGkYwcPxSTphRKrPKH2OBLN15oqaOqTnrbfQTKU8LrT-G1KN0; JSESSIONID="ajax:2537874531574646860"'
-    request['Csrf-Token'] = 'ajax:2537874531574646860'
 
     response = http.request(request)
 

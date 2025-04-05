@@ -81,6 +81,7 @@ input[type="submit"]:disabled {
   background-color: #ff6200;
   background-image: var(--gradient);
   box-shadow: 1px 3px 6px #dcdcdc;
+  height: fit-content;
 }
 
 .sub-cta {

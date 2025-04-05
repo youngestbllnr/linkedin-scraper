@@ -12,9 +12,14 @@
         <%= submit_tag "Embed", class: "cta" %>
       <% end %>
 
-      <%= form_tag(search_path, method: :post) do %>
+      <%= form_tag(search_profiles_path, method: :post) do %>
+        <%= text_area_tag :input, nil, placeholder: "Enter keywords", rows: 5 %>
+        <%= submit_tag "Search Profiles", class: "cta" %>
+      <% end %>
+
+      <%= form_tag(search_collaborations_path, method: :post) do %>
         <%= text_area_tag :input, nil, placeholder: "Enter project or campaign idea", rows: 5 %>
-        <%= submit_tag "Search", class: "cta" %>
+        <%= submit_tag "Search Collaborations", class: "cta" %>
       <% end %>
     </div>
   </main>

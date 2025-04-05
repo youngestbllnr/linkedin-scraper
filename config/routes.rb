@@ -8,8 +8,11 @@ Rails.application.routes.draw do
   ## Scrape
   post 'scrape', to: 'main#scrape', as: 'scrape'
 
-  ## Search
-  post 'search', to: 'main#search', as: 'search'
+  ## Search Profiles
+  post 'search_profiles', to: 'main#search_profiles', as: 'search_profiles'
+
+  ## Search Collaborations
+  post 'search_collaborations', to: 'main#search_collaborations', as: 'search_collaborations'
 
   ## Embed
   post 'embed', to: 'main#embed', as: 'embed'
