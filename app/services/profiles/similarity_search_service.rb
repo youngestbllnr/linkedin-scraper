@@ -18,7 +18,7 @@ module Profiles
     ]
 
     DEFAULT_THRESHOLDS = {
-      METHODS[:cosine] => 0.86,
+      METHODS[:cosine] => 0.86, # To be tested out
       METHODS[:euclidean] => 0.5 # To be tested out
     }
 

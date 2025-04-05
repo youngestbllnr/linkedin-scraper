@@ -29,7 +29,7 @@ class MainController < ApplicationController
   def search_profiles
     input = params[:input]
 
-    results = Profiles::SimilaritySearchService.call(input)
+    results = Profiles::SearchService.call(input)
 
     render json: { results: results }, status: :ok
   end

@@ -13,7 +13,7 @@
       <% end %>
 
       <%= form_tag(search_profiles_path, method: :post) do %>
-        <%= text_area_tag :input, nil, placeholder: "Enter keywords", rows: 5 %>
+        <%= text_area_tag :input, nil, placeholder: "Enter description or keywords", rows: 5 %>
         <%= submit_tag "Search Profiles", class: "cta" %>
       <% end %>
 

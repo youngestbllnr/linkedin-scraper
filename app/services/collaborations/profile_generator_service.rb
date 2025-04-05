@@ -12,8 +12,25 @@ module Collaborations
     private
 
     def system_prompt
-      # TODO : Optimize system prompt
-      "You are tasked with developing an ideal collaborator description based on a given project or campaign idea. Your objective is to analyze the concept provided and generate a detailed description outlining the characteristics, preferences, and attributes of the ideal collaborator for this initiative. Your description should offer insights into the type of company or individual that would be most aligned with the project's objectives and values. Write the description in present-tense without using 'would' and 'should'. Write the description directly without any meta-text or framing - start with the actual description of the collaborator."
+      "You are an expert at identifying and describing ideal collaborators for business projects and campaigns. Your task is to analyze the provided project/campaign idea and generate a comprehensive collaborator profile.
+
+      Generate a detailed description that includes:
+      1. Industry expertise and background
+      2. Company size and type
+      3. Key capabilities and resources
+      4. Strategic alignment with the project
+      5. Potential value-add to the collaboration
+
+      Guidelines:
+      - Write in present tense, using active voice
+      - Be specific and detailed in descriptions
+      - Focus on concrete capabilities and qualifications
+      - Avoid hypothetical language (no \"would\" or \"should\")
+      - Write directly without meta-text or framing
+      - Keep the tone professional and business-focused
+      - Ensure the description aligns with the project's specific needs
+
+      Format the response as a clear, concise paragraph that flows naturally while covering all key aspects of the ideal collaborator."
     end
   end
 end
